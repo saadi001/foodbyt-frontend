@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from '../pages/Shared/Footer/Footer';
 import Navbar from '../pages/Shared/Navbar/Navbar';
 
 const Main = () => {
@@ -11,7 +12,7 @@ const Main = () => {
                          {/* <!-- Page content here --> */}
                          <Navbar></Navbar>
                          <Outlet></Outlet>
-                         
+                         <Footer></Footer>                         
                     </div>
                     <div className="drawer-side">
                          <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
