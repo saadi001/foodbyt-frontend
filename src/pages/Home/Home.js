@@ -3,7 +3,8 @@ import Landingpage from './Landingpage/Landingpage';
 
 const Home = () => {
      return (
-          <div>
+          // responsiveness calculation (mx-3 md:mx-8 lg:mx-20)
+          <div className=''>
                <Landingpage></Landingpage>
           </div>
      );
