@@ -11,8 +11,7 @@ const Main = () => {
                     <div className="drawer-content">
                          {/* <!-- Page content here --> */}
                          <Navbar></Navbar>
-                         <Outlet></Outlet>
-                         <Footer></Footer>                         
+                         <Outlet></Outlet>                                               
                     </div>
                     <div className="drawer-side">
                          <label htmlFor="my-drawer-4" className="drawer-overlay"></label>

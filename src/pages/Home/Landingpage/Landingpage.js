@@ -1,13 +1,28 @@
 import { MapPinIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import React, { useContext } from 'react';
 import food from '../../../Asset/Image/Food1.png'
 import halim from '../../../Asset/Image/halim.jpeg'
 import juice from '../../../Asset/Image/juice.jpeg'
 import lebu from '../../../Asset/Image/lebu.jpeg'
-import LandingpageSlick from './LandingpageSlick/LandingpageSlick';
-// import SlickCarsousel from './SlickCarsousel';
+import { NavColorContext } from '../../../Contexts/NavcolorProvider';
+import LandingpageSlick from './LandingpageSlick/LandingpageSlick'
 
 const Landingpage = () => {
+     const {color, setColor} = useContext(NavColorContext)
+
+     const changeColor = () => {
+          console.log('scrolled')
+          if (window.scrollY > 10) {
+               setColor(true)
+               console.log('scrolled')
+          }
+          else {
+               setColor(false)
+          }
+     }
+
+     window.addEventListener('scroll', changeColor);
+
      return (
           <div className='bg-blue-200'>
                <div className='min-h-screen flex mx-3 md:mx-8 lg:mx-20'>
