@@ -30,8 +30,8 @@ const Navbar = () => {
           </li>
      </>
      return (
-          <div className='fixed left-0 right-0'>
-               <div className="navbar justify-between gap-3  lg:px-8">
+          <div className='fixed left-0 right-0 z-40'>
+               <div className="navbar justify-between gap-3  px-3 md:px-8 lg:px-20 z-50">
                     <div className="">
                          <div className="dropdown">
                               <label tabIndex={0} className="btn btn-ghost lg:hidden">
