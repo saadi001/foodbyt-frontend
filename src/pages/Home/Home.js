@@ -4,6 +4,7 @@ import Footer from '../Shared/Footer/Footer';
 import Contactus from './ContactUs/Contactus';
 import FolKhejurItems from './FolKhejurItems/FolKhejurItems';
 import HalimItems from './HalimItems/HalimItems';
+import Items from './Items/Items';
 import Landingpage from './Landingpage/Landingpage';
 import LandingpageSlick from './Landingpage/LandingpageSlick/LandingpageSlick';
 import Shops from './Shops/Shops';
@@ -20,10 +21,13 @@ const Home = () => {
                <div className='mx-3 md:mx-8 lg:mx-20 pt-5'>
                     {/* <SlickCarsousel></SlickCarsousel> */}
                     {/* <LandingpageSlick></LandingpageSlick> */}
-                    <VajaporaItem></VajaporaItem>
+
+                    <Items></Items>
+
+                    {/* <VajaporaItem></VajaporaItem>
                     <HalimItems></HalimItems>
                     <ShorvotItems></ShorvotItems>
-                    <FolKhejurItems></FolKhejurItems>
+                    <FolKhejurItems></FolKhejurItems> */}
                     <Shops></Shops>
                     <Contactus></Contactus>
                     <Footer></Footer>

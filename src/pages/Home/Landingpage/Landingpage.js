@@ -24,7 +24,7 @@ const Landingpage = () => {
      window.addEventListener('scroll', changeColor);
 
      return (
-          <div className='bg-blue-200'>
+          <div className='bg-blue-200/40'>
                <div className='min-h-screen flex mx-3 md:mx-8 lg:mx-20'>
                     <div className='w-1/2 relative flex items-center'>
                          <div>

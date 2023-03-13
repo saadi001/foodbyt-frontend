@@ -14,8 +14,8 @@ const Shops = () => {
           { id: 3 },
      ]
      return (
-          <div className='pt-12'>
-               <h5 className='mb-12 font-semibold text-xl'>Order from your favourite Hotel/Restaurent</h5>
+          <div className='py-14'>
+               <h5 className='mb-14 font-bold text-center text-4xl'>Order from your favourite <br /> Hotel/Restaurent</h5>
                <div className='grid grid-cols-3 gap-4'>
                     {
                          checking?.map(c => <div>
@@ -28,14 +28,13 @@ const Shops = () => {
                                         <input type="radio" name="rating-5" className="mask mask-star" />
                                         <input type="radio" name="rating-5" className="mask mask-star" />
                                         <input type="radio" name="rating-5" className="mask mask-star" />
-                                        <input type="radio" name="rating-5" className="mask mask-star" checked={true} />
+                                        <input type="radio" name="rating-5" className="mask mask-star" />
                                         <input type="radio" name="rating-5" className="mask mask-star" />
                                    </div>
                               </div>
                          </div>)
                     }
                </div>
-               <div className='flex justify-end my-2 text-yellow-400'><p>see more</p></div>
           </div>
      );
 };
