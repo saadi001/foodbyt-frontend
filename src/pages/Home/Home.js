@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import NavcolorProvider, { NavColorContext } from '../../Contexts/NavcolorProvider';
 import Footer from '../Shared/Footer/Footer';
 import Contactus from './ContactUs/Contactus';
+import FAQ from './FAQ/FAQ';
 import FolKhejurItems from './FolKhejurItems/FolKhejurItems';
 import HalimItems from './HalimItems/HalimItems';
 import Items from './Items/Items';
@@ -30,6 +31,7 @@ const Home = () => {
                     <FolKhejurItems></FolKhejurItems> */}
                     <Shops></Shops>
                     <Contactus></Contactus>
+                    <FAQ></FAQ>
                     <Footer></Footer>
                </div>
           </div>
