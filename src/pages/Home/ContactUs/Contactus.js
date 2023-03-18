@@ -5,7 +5,9 @@ const Contactus = () => {
         <section className="bg-white">
             <div className="container px-6 py-14 mx-auto">
                 <div className="text-center">
-                    <p className="font-bold text-4xl ">Contact us</p>
+                    <p className="font-bold text-4xl "><span class="before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#EA2A00] relative inline-block">
+    <span class="relative text-white">Contact</span>
+  </span> us</p>
                     <p className="mt-3 text-gray-500 ">Our friendly team is always here to respond you.</p>
                 </div>
 

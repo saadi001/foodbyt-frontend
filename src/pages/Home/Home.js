@@ -16,10 +16,10 @@ import VajaporaItem from './VajaporaItem/VajaporaItem';
 const Home = () => {     
      
      return (
-          // responsiveness calculation (mx-3 md:mx-8 lg:mx-20)
+          // responsiveness calculation (mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto)
           <div className='w-full'>
                <Landingpage></Landingpage>
-               <div className='mx-3 md:mx-8 lg:mx-20 pt-5'>
+               <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
                     {/* <SlickCarsousel></SlickCarsousel> */}
                     {/* <LandingpageSlick></LandingpageSlick> */}
 

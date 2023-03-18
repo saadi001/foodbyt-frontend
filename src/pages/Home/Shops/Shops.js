@@ -15,7 +15,9 @@ const Shops = () => {
      ]
      return (
           <div className='py-14'>
-               <h5 className='mb-14 font-bold text-center text-4xl'>Order from your favourite <br /> Hotel/Restaurent</h5>
+               <h5 className='mb-14 font-bold text-center text-4xl'>Order from your <br />  favourite <span class="before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#EA2A00] relative inline-block">
+    <span class="relative text-white">Hotel/Restaurent</span>
+  </span></h5>
                <div className='grid grid-cols-3 gap-4'>
                     {
                          checking?.map(c => <div>

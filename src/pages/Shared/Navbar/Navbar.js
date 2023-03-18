@@ -15,7 +15,7 @@ const Navbar = () => {
                     Services
                     <svg className="fill-current rotate-90" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                </a>
-               <ul className="p-2 bg-white">
+               <ul className="p-2 z-40 bg-white">
                     <li><a>Vajapora Items</a></li>
                     <li><a>Halim</a></li>
                     <li><a>Juice and sweets</a></li>
@@ -41,7 +41,7 @@ const Navbar = () => {
      
 
      return (
-          <div className={`fixed left-0 right-0 z-40 ${color ? 'bg-white shadow-md' : ''}`}>
+          <div className={`z-40 sticky top-0 ${color ? 'bg-white shadow-md' : ''}`}>
                <div className="navbar justify-between gap-3  px-3 md:px-8 lg:px-20 z-50">
                     <div className="">
                          <div className="dropdown">
