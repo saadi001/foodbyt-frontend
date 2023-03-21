@@ -1,16 +1,51 @@
-import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
 import google from '../../Asset/icon/icons8-google-48.png'
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Login = () => {
+     const [loginError, setLoginError] = useState('')
+     const { signIn, providerLogin } = useContext(AuthContext)
+     const { register, formState: { errors }, handleSubmit } = useForm();
+     const provider = new GoogleAuthProvider()
+     const navigate = useNavigate()
+
+     const googleProviderLogin = (provider) => {
+          providerLogin(provider)
+               .then(result => {
+                    console.log(result.user)
+                    navigate('/')
+               })
+               .catch(err => console.error(err))
+     }
+
+     const handleLogin = (data) => {
+          console.log(data)
+          const {email, password} = data;
+
+          signIn(email, password)
+          .then(result => {
+               const user = result.user;
+               console.log(user)
+               navigate('/')
+          })
+          .catch(error =>{
+               const errMessage = error.message.split('/')[1].slice(0, -1).slice(0, -1);
+               setLoginError(errMessage)
+          })
+
+     }
      return (
-          <div className='my-14'>
-               {/* <!-- component --> */}               
+          <div className='my-5'>
+               {/* <!-- component --> */}
 
                <div class=" flex flex-col items-center justify-center">
                     <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
                          <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
-                         <button class="flex justify-center gap-3 items-center mt-6 border rounded-md py-3 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
-                         <img className='w-6' src={google} alt="" /> 
+                         <button onClick={() => googleProviderLogin(provider)} class="flex justify-center gap-3 items-center mt-6 border rounded-md py-3 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
+                              <img className='w-6' src={google} alt="" />
                               <span>Login with Google</span>
                          </button>
                          <div class="relative mt-10 h-px bg-gray-300">
@@ -18,8 +53,9 @@ const Login = () => {
                                    <span class="bg-white px-4 text-xs text-gray-500 uppercase">Or Login With Email</span>
                               </div>
                          </div>
+
                          <div class="mt-10">
-                              <form action="#">
+                              <form onSubmit={handleSubmit(handleLogin)}>
                                    <div class="flex flex-col mb-6">
                                         <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
                                         <div class="relative">
@@ -29,7 +65,11 @@ const Login = () => {
                                                   </svg>
                                              </div>
 
-                                             <input id="email" type="email" name="email" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="E-Mail Address" />
+                                             <input {...register('email', { required: "This field is required." })} type="email" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="E-Mail Address" />
+                                             {errors.email && <p className='text-xs text-red-500 flex items-center mt-1'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mr-[2px]">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                                             </svg>
+                                                  {errors.email?.message}</p>}
                                         </div>
                                    </div>
                                    <div class="flex flex-col mb-6">
@@ -43,7 +83,14 @@ const Login = () => {
                                                   </span>
                                              </div>
 
-                                             <input id="password" type="password" name="password" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Password" />
+                                             <input {...register('password', { required: "This field is required." })} type="password" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Password" />
+                                             {errors.password && <p className='text-xs text-red-500 flex items-center mt-1'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mr-[2px]">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                                             </svg>
+                                                  {errors.password?.message}</p>}
+                                                  {loginError && <p className='text-xs text-red-500 flex items-center mt-1'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-3 h-3 mr-[2px]">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                              </svg>{loginError}</p>}
                                         </div>
                                    </div>
 
@@ -72,7 +119,7 @@ const Login = () => {
                                              <path d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                                         </svg>
                                    </span>
-                                   <span class="ml-2">You don't have an account?</span>
+                                   <Link to={'/signup'} class="ml-2">You don't have an account?</Link>
                               </a>
                          </div>
                     </div>

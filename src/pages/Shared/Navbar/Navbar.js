@@ -33,7 +33,7 @@ const Navbar = () => {
                <ul className="p-2 bg-white">
                     <li><a className='px-6'>Your profile</a></li>
                     <li><Link to={'/login'} className='px-6'>Log in</Link></li>
-                    <li><a className='px-6'>Sign up</a></li>
+                    <li><Link to={'/signup'} className='px-6'>Sign up</Link></li>
                </ul>
           </li>
      </>

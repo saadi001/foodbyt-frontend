@@ -4,7 +4,7 @@ import food from '../../Asset/Image/Food1.png'
 
 
 const Product = ({value}) => {
-     console.log(value)
+     // console.log(value)
      return (
           <div className='group/product border border-slate-900/20 hover:border-yellow-400  rounded-2xl shadow-lg hover:shadow-lg hover:bg-yellow-400 duration-100 ease-linear'>
                          <img className='mt-[-80px] w-full group-hover/product:-translate-y-2 duration-100 ease-linear' src={food} alt="" />

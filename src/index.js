@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NavcolorProvider from './Contexts/NavcolorProvider';
+import AuthProvider from './Contexts/AuthProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <NavcolorProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </NavcolorProvider>
+
+  <React.StrictMode>
+    <AuthProvider>
+      <NavcolorProvider>
+        <App />
+      </NavcolorProvider>
+    </AuthProvider>
+  </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

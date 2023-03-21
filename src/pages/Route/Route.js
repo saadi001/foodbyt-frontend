@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import Home from "../Home/Home";
 import ItemsById from "../Home/Items/ItemsById";
 import Login from "../Login/Login";
+import Signup from "../Signup/Signup";
 
 export const router = createBrowserRouter([
      {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
                {
                     path: '/login',
                     element: <Login></Login>
+               },
+               {
+                    path: '/signup',
+                    element: <Signup></Signup>
                },
                {
                     path: '/items/:id',
