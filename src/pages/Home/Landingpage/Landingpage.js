@@ -39,9 +39,12 @@ const Landingpage = () => {
                               </span> <br /> From Home</p>
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
                               <div className='mt-16  flex gap-4'>
-                                   <div className='border '><img className='object-cover w-full h-full' src={halim} alt="" /></div>
-                                   <div className='border '><img className='object-cover w-full h-full' src={juice} alt="" /></div>
-                                   <div className='border '><img className='object-cover w-full h-full' src={lebu} alt="" /></div>
+                                   <div className='border relative'>
+                                        <img className='object-cover w-full h-full' src={halim} alt="" />
+                                        <div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div>
+                                   </div>
+                                   <div className='border relative'><img className='object-cover w-full h-full' src={juice} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div></div>
+                                   <div className='border relative'><img className='object-cover w-full h-full' src={lebu} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div></div>
                                    {/* <LandingpageSlick></LandingpageSlick> */}
                               </div>
                          </div>
