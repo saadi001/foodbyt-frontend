@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import Profile from "../../Layout/Profile";
+import ProfileLayout from "../../Layout/ProfileLayout";
 import Home from "../Home/Home";
 import ItemsById from "../Home/Items/ItemsById";
 import Login from "../Login/Login";
@@ -29,5 +31,15 @@ export const router = createBrowserRouter([
                }
           ]
      },
+     {
+          path: '/profile',
+          element: <ProfileLayout></ProfileLayout>,
+          children: [
+               {
+                    path: '/profile',
+                    element: <Profile></Profile>
+               }
+          ]
+     }
      
 ])

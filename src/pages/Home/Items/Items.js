@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import image from '../../../Asset/Image/Food1.png'
+import image from '../../../Asset/Image/Food1.png';
+import img from '../../../Asset/Image/vajapora 2.jpeg'
 
 const Items = () => {
      const [iftarItem, setIftarItem] = useState([])
-     const navigate = useNavigate()
 
      useEffect(() => {
           fetch('https://foodbyt-backend.vercel.app/items')
@@ -12,9 +12,6 @@ const Items = () => {
                .then(data => setIftarItem(data))
      }, [])
 
-     // const navigateToSingleItemsData = (id) =>{
-     //      navigate(`/items/${id}`)
-     // }
 
      return (
           <div id='services' className='py-14'>
@@ -26,10 +23,12 @@ const Items = () => {
 
                          {
                               iftarItem?.map(c => <Link to={`/items/${c._id}`} className='p-5 hover:scale-105 duration-200 ease-out cursor-pointer'>
-                                   <img className='w-8/12 mx-auto' src={image} alt="" />
+                                   <div className='w-44 h-44  mx-auto '>
+                                        <img className='object-cover w-full h-full rounded-full' src={c.image} alt="" />
+                                   </div>
                                    <div className='mt-3'>
                                         <p className='text-center text-xl font-semibold mb-2 '>{c.itemName}</p>
-                                        <p className='text-center'>{c.details}</p>
+                                        <p className='text-center text-sm'>{c.details}</p>
                                    </div>
                               </Link>)
                          }

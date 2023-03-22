@@ -1,8 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Asset/logo/logo1.png'
-import { ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
-import { NavColorContext } from '../../../Contexts/NavcolorProvider';
 import  { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Navbar = () => {
@@ -18,7 +16,7 @@ const Navbar = () => {
      const menu = <>
           <li><Link to={'/'}>Home</Link></li>
           <li tabIndex={0}>
-               <a href='#services' className="justify-between">
+               <a className="justify-between">
                     Services
                     <svg className="fill-current rotate-90" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                </a>
@@ -40,7 +38,7 @@ const Navbar = () => {
                <ul className="p-2 bg-white">
                     {user ?
                          <>
-                              <li><a className='px-6'>Your profile</a></li>
+                              <li><Link to={'/profile'} className='px-6'>Your profile</Link></li>
                               <li onClick={handleLogout}><a className='px-6'>Logout</a></li>
                          </> : <>
                               <li><Link to={'/login'} className='px-6'>Log in</Link></li>
