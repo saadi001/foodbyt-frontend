@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Cart from '../pages/Cart/Cart';
 import Footer from '../pages/Shared/Footer/Footer';
 import Navbar from '../pages/Shared/Navbar/Navbar';
 
@@ -15,11 +16,9 @@ const Main = () => {
                     </div>
                     <div className="drawer-side">
                          <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-                         <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+                         <ul className="menu px-4 py-6 w-80 bg-base-100 text-base-content border">
                               {/* <!-- Sidebar content here --> */}
-                              <p>hello</p>
-                              <li><a>Sidebar Item 1</a></li>
-                              <li><a>Sidebar Item 2</a></li>
+                              <Cart></Cart>
                          </ul>
                     </div>
                </div>

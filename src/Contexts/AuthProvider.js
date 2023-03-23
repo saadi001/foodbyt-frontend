@@ -10,6 +10,13 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
      const [user, setUser] = useState(null);
      const [loading, setLoading] = useState(true);
+     const [cart, setCart] = useState([])
+
+     const handleAddtoCart = (product) =>{     
+          console.log(product)
+          const newCart = [...cart, product]
+          setCart(newCart)
+     }
 
      const providerLogin = (provider) => {
           setLoading(true);
@@ -46,7 +53,7 @@ const AuthProvider = ({ children }) => {
           }
      }, [])
 
-     const authInfo = { user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading };
+     const authInfo = {user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading, cart, setCart, handleAddtoCart };
      return (
           <div>
                <AuthContext.Provider value={authInfo}>
