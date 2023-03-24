@@ -1,0 +1,77 @@
+[
+     {
+          "id": "1",
+          "name": "Peyaju",
+          "price": 5,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "2",
+          "name": "alur chop",
+          "price": 5,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "9",
+          "name": "Halim (small)",
+          "price": 50,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "10",
+          "name": "Halim (medium)",
+          "price": 100,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "11",
+          "name": "Halim (large)",
+          "price": 150,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "17",
+          "name": "Handmade Juice (Mango flovor) (250ml)",
+          "price": 15,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "18",
+          "name": "Handmade Juice (Mango flovor) (350ml)",
+          "price": 20,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "39",
+          "name": "Banana (1 piece)",
+          "price": 10,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "40",
+          "name": "Khejur (100g)",
+          "price": 40,
+          "quantity": 0,
+          "outOfStock": false
+     },
+     {
+          "id": "43",
+          "name": "Muri (250g)",
+          "price": 20,
+          "quantity": 0
+     },
+     {
+          "id": "44",
+          "name": "Muri (500g)",
+          "price": 40,
+          "quantity": 0
+     }
+]

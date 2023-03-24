@@ -12,6 +12,7 @@ const AuthProvider = ({ children }) => {
      const [user, setUser] = useState(null);
      const [loading, setLoading] = useState(true);
      const [cart, setCart] = useState([])
+     const [anotherCart, setAntoherCart] = useState([])
 
      const handleAddtoCart = (product) =>{     
           // console.log(product)
@@ -32,9 +33,12 @@ const AuthProvider = ({ children }) => {
                     savedCart.push(addedProduct)
                }
           }
-          console.log(savedCart)
-          // setCart(savedCart)
+          console.log(savedCart)        
+          // setCart(savedCart) 
+          setAntoherCart(savedCart)   
+          // console.log(anotherCart) 
      },[cart])
+     console.log(anotherCart)
 
      const providerLogin = (provider) => {
           setLoading(true);
@@ -71,7 +75,7 @@ const AuthProvider = ({ children }) => {
           }
      }, [])
 
-     const authInfo = {user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading, cart, setCart, handleAddtoCart };
+     const authInfo = {user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading, cart, setCart, handleAddtoCart, anotherCart };
      return (
           <div>
                <AuthContext.Provider value={authInfo}>
