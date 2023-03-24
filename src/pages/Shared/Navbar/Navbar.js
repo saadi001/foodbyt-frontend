@@ -5,7 +5,7 @@ import  { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Navbar = () => {     
      const { user, logOut, cart, setCart } = useContext(AuthContext)
-     console.log(cart)
+     // console.log(cart)
      const handleLogout = () =>{
           logOut()
           .then(()=>{})
@@ -50,7 +50,7 @@ const Navbar = () => {
 
 
      return (
-          <div className={`z-40 sticky top-0 bg-white`}>
+          <div className={`z-40 sticky top-0 bg-white shadow-sm`}>
                <div className="navbar justify-between gap-3  px-3 md:px-8 lg:px-20 z-50">
                     <div className="">
                          <div className="dropdown">

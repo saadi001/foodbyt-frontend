@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../Firebase/Firebase.config';
+import { addToDb, getStoredCart } from '../Components/addToDb';
 
 
 
@@ -13,10 +14,27 @@ const AuthProvider = ({ children }) => {
      const [cart, setCart] = useState([])
 
      const handleAddtoCart = (product) =>{     
-          console.log(product)
+          // console.log(product)
           const newCart = [...cart, product]
           setCart(newCart)
+          addToDb(product.id)
      }
+
+     useEffect(()=>{
+          const storedCart = getStoredCart()
+
+          const savedCart = [];
+          for(const id in storedCart){
+               const addedProduct = cart.find(product => product.id == id)
+               if(addedProduct){
+                    const quantity = storedCart[id];
+                    addedProduct.quantity = quantity;
+                    savedCart.push(addedProduct)
+               }
+          }
+          console.log(savedCart)
+          // setCart(savedCart)
+     },[cart])
 
      const providerLogin = (provider) => {
           setLoading(true);

@@ -3,14 +3,10 @@ import NavcolorProvider, { NavColorContext } from '../../Contexts/NavcolorProvid
 import Footer from '../Shared/Footer/Footer';
 import Contactus from './ContactUs/Contactus';
 import FAQ from './FAQ/FAQ';
-import FolKhejurItems from './FolKhejurItems/FolKhejurItems';
-import HalimItems from './HalimItems/HalimItems';
 import Items from './Items/Items';
 import Landingpage from './Landingpage/Landingpage';
 import LandingpageSlick from './Landingpage/LandingpageSlick/LandingpageSlick';
 import Shops from './Shops/Shops';
-import ShorvotItems from './ShorvotItems/ShorvotItems';
-import VajaporaItem from './VajaporaItem/VajaporaItem';
 // import SlickCarsousel from './Landingpage/SlickCarsousel';
 
 const Home = () => {     
