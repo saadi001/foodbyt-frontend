@@ -1,0 +1,58 @@
+[
+     {
+          "id": "1",
+          "name": "Peyaju",
+          "price": 5,
+          "image": "https://i.ibb.co/TYnnt03/images-2023-03-15-T122226-249.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "2",
+          "name": "alur chop",
+          "price": 5,
+          "image": "https://i.ibb.co/ZTs3Pj9/images-2023-03-15-T122853-872.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "3",
+          "name": "beguni",
+          "price": 5,
+          "image": "https://i.ibb.co/YfZyxGc/images-2023-03-15-T122824-323.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "4",
+          "name": "Chola (10tk)",
+          "price": 10,
+          "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "5",
+          "name": "Chola (20tk)",
+          "price": 20,
+          "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "6",
+          "name": "Chola (30tk)",
+          "price": 30,
+          "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "7",
+          "name": "Chola (40tk)",
+          "price": 40,
+          "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
+          "outOfStock": false
+          },
+          {
+          "id": "8",
+          "name": "Dim chop",
+          "price": 10,
+          "image": "https://i.ibb.co/W3rQzr7/images-2023-03-15-T123019-675.jpg",
+          "outOfStock": false
+          }
+]

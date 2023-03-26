@@ -10,7 +10,7 @@ const Product = ({ value }) => {
      return (
           <div className='group/product my-5 hover:scale-[1.03] border border-slate-900/20 rounded-xl shadow-lg hover:shadow-lg hover:bg-yellow-400 duration-100 ease-linear'>
                <div className='w-full h-48'>
-                    <img className='w-full h-full object-cover  rounded-tl-xl rounded-tr-xl ' src={img} alt="" />
+                    <img className='w-full h-full object-cover  rounded-tl-xl rounded-tr-xl ' src={value.image} alt="" />
                </div>
                <div className='mt-5 px-5 pb-3'>
                     <p className='text-lg font-semibold'>{value.name}</p>

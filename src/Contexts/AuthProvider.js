@@ -4,15 +4,16 @@ import app from '../Firebase/Firebase.config';
 import { addToDb, getStoredCart } from '../Components/addToDb';
 
 
-
 export const AuthContext = createContext();
 const auth = getAuth(app);
+
 
 const AuthProvider = ({ children }) => {
      const [user, setUser] = useState(null);
      const [loading, setLoading] = useState(true);
      const [cart, setCart] = useState([])
-     const [anotherCart, setAntoherCart] = useState([])
+     const [products, setProducts] = useState([])
+    
 
      const handleAddtoCart = (product) =>{     
           // console.log(product)
@@ -22,23 +23,25 @@ const AuthProvider = ({ children }) => {
      }
 
      useEffect(()=>{
-          const storedCart = getStoredCart()
+          fetch('products.json')
+          .then(res => res.json())
+          .then(data => setProducts(data))
+     },[])
 
+     useEffect(()=>{
+          const storedCart = getStoredCart()          
           const savedCart = [];
           for(const id in storedCart){
-               const addedProduct = cart.find(product => product.id == id)
+               const addedProduct = products.find(product => product.id == id)               
                if(addedProduct){
                     const quantity = storedCart[id];
                     addedProduct.quantity = quantity;
                     savedCart.push(addedProduct)
                }
           }
-          console.log(savedCart)        
-          // setCart(savedCart) 
-          setAntoherCart(savedCart)   
-          // console.log(anotherCart) 
-     },[cart])
-     console.log(anotherCart)
+          console.log(savedCart)
+          setCart(savedCart)
+     },[products])
 
      const providerLogin = (provider) => {
           setLoading(true);
@@ -75,7 +78,7 @@ const AuthProvider = ({ children }) => {
           }
      }, [])
 
-     const authInfo = {user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading, cart, setCart, handleAddtoCart, anotherCart };
+     const authInfo = {user, loading, providerLogin, logOut, createUser, signIn, setUser, updateUserProfile, setLoading, cart, setCart, handleAddtoCart };
      return (
           <div>
                <AuthContext.Provider value={authInfo}>

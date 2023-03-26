@@ -22,7 +22,7 @@ const Items = () => {
                     <div className='grid grid-cols-3'>
 
                          {
-                              iftarItem?.map(c => <Link to={`/items/${c._id}`} className='p-5 hover:scale-105 duration-200 ease-out cursor-pointer'>
+                              iftarItem?.map(c => <Link key={c._id} to={`/items/${c._id}`} className='p-5 hover:scale-105 duration-200 ease-out cursor-pointer'>
                                    <div className='w-44 h-44  mx-auto '>
                                         <img className='object-cover w-full h-full rounded-full' src={c.image} alt="" />
                                    </div>

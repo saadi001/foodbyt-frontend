@@ -4,7 +4,7 @@ import logo from '../../../Asset/logo/logo1.png'
 import  { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Navbar = () => {     
-     const { user, logOut, cart, setCart } = useContext(AuthContext)
+     const { user, logOut, cart } = useContext(AuthContext)
      // console.log(cart)
      const handleLogout = () =>{
           logOut()
@@ -19,7 +19,7 @@ const Navbar = () => {
                     Services
                     <svg className="fill-current rotate-90" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                </a>
-               <ul className="p-2 z-40 bg-white">
+               <ul className="p-2 z-40 bg-white border">
                     <li><a>Vajapora Items</a></li>
                     <li><a>Halim</a></li>
                     <li><a>Juice and sweets</a></li>
@@ -34,7 +34,7 @@ const Navbar = () => {
                     Account
                     <svg className="fill-current rotate-90" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                </a>
-               <ul className="p-2 bg-white">
+               <ul className="p-2 bg-white border">
                     {user ?
                          <>
                               <li><Link to={'/profile'} className='px-6'>Your profile</Link></li>
@@ -72,10 +72,10 @@ const Navbar = () => {
                                    <label htmlFor="my-drawer-4" className="drawer-button cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                                    </svg>
-                                        <div className={`${cart.length > 0 ? "inline-block" : "hidden"} badge badge-xs bg-primary text-white border-none absolute left-[50%] bottom-[50%]`}>{cart.length}</div>
+                                        <div className={`${cart?.length > 0 ? "inline-block" : "hidden"} badge badge-xs bg-primary text-white border-none absolute left-[50%] bottom-[50%]`}>{cart?.length}</div>
                                    </label>
                               </div>
-                              <button className="bg-primary text-white px-5 py-2 rounded-3xl font-semibold">Confirm Order</button>
+                              <Link to={'/checkout'}><button className="bg-primary text-white px-5 py-2 rounded-3xl font-semibold">Confirm Order</button></Link>
                          </div>
                     </div>
 
