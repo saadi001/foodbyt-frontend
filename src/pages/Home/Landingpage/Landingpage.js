@@ -30,11 +30,11 @@ const Landingpage = () => {
      return (
           <div className='bg-blue-200/40'>
                {/* <Navbar></Navbar> */}
-               <div className='min-h-screen flex mx-3 md:mx-8 lg:mx-24 '>
-                    <div className='w-1/2 relative flex items-center'>
+               <div className='min-h-screen flex mx-5 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto'>
+                    <div className='md:w-1/2 w-full relative flex items-center'>
                          <div>
-                              <p className='text-xl font-medium flex items-center gap-1'><MapPinIcon className='w-5 h-5 text-[#EA2A00]'></MapPinIcon> Daffodil International University</p>
-                              <p className='text-[42px] font-bold my-3'>Order your favourite <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#EA2A00] relative inline-block">
+                              <p className='text-lg md:text-xl font-medium flex items-center gap-1'><MapPinIcon className='w-5 h-5 text-[#EA2A00]'></MapPinIcon> Daffodil International University</p>
+                              <p className='text-[36px] md:text-[42px] font-bold my-3'>Order your favourite <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#EA2A00] relative inline-block">
                                    <span class="relative text-white">Iftar</span>
                               </span> <br /> From Home</p>
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
@@ -49,7 +49,7 @@ const Landingpage = () => {
                               </div>
                          </div>
                     </div>
-                    <div className='w-1/2'>
+                    <div className='w-1/2 hidden md:inline-block'>
                          <img className=' w-full' src={food} alt="" />
                     </div>
                </div>

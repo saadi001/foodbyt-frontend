@@ -1,15 +1,15 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Asset/logo/logo1.png'
-import  { AuthContext } from '../../../Contexts/AuthProvider';
+import { AuthContext } from '../../../Contexts/AuthProvider';
 
-const Navbar = () => {     
+const Navbar = () => {
      const { user, logOut, cart } = useContext(AuthContext)
      // console.log(cart)
-     const handleLogout = () =>{
+     const handleLogout = () => {
           logOut()
-          .then(()=>{})
-          .catch(err=>console.error(err))
+               .then(() => { })
+               .catch(err => console.error(err))
      }
 
      const menu = <>
@@ -63,11 +63,14 @@ const Navbar = () => {
                          </div>
                          <Link to={'/'} className="normal-case text-xl"><img className='w-32' src={logo} alt="" /></Link>
                     </div>
-                    <div className="hidden lg:flex lg:items-center ">
-                         <ul className="menu menu-horizontal px-2 font-medium">
-                              {menu}
-                         </ul>
-                         <div className="ml-8 flex items-center gap-6">
+                    <div>
+                         <div className="hidden lg:flex lg:items-center ">
+                              <ul className="menu menu-horizontal px-2 font-medium">
+                                   {menu}
+                              </ul>
+
+                         </div>
+                         <div className="ml-8 flex items-center gap-4 md:gap-6">
                               <div className='relative'>
                                    <label htmlFor="my-drawer-4" className="drawer-button cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -75,7 +78,7 @@ const Navbar = () => {
                                         <div className={`${cart?.length > 0 ? "inline-block" : "hidden"} badge badge-xs bg-primary text-white border-none absolute left-[50%] bottom-[50%]`}>{cart?.length}</div>
                                    </label>
                               </div>
-                              <Link to={'/checkout'}><button className="bg-primary text-white px-5 py-2 rounded-3xl font-semibold">Confirm Order</button></Link>
+                              <Link to={'/checkout'}><button className="bg-primary text-sm md:text-base text-white px-3 md:px-5 py-2 rounded-3xl font-semibold">Confirm Order</button></Link>
                          </div>
                     </div>
 
