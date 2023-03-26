@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import Loading from '../Loading/Loading';
 
 const Checkout = () => {
      const {cart} = useContext(AuthContext)
+     const [loading, setLoading] = useState(false)
+     // getting data and time 
      const currentDateTime = new Date();
      let date = currentDateTime.getDate()+'-'+(currentDateTime.getMonth()+1)+'-'+currentDateTime.getFullYear();
      let time = currentDateTime.getHours() + ":" + currentDateTime.getMinutes() + ":" + currentDateTime.getSeconds();
-     console.log(cart)
      let productPrice = 0;
      let serviceCharge = 0;
      // calculating total product price 
@@ -55,6 +57,7 @@ const Checkout = () => {
      console.log(dataOfOrder)
      
      const handleOrder = () =>{
+          setLoading(true)
           fetch('https://foodbyt-backend.vercel.app/orders',{
                method: "POST",
                headers: {
@@ -65,6 +68,7 @@ const Checkout = () => {
           .then(res => res.json())
           .then(result => {
                toast.success("order taken successfully.")
+               setLoading(false)
           })
      }
 
@@ -130,7 +134,7 @@ const Checkout = () => {
                                         <option selected>Cash on delivery</option>                                        
                                    </select>
                               </div>
-                              <button onClick={handleOrder} className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>Order</button>
+                              <button onClick={handleOrder} className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>{loading ? <Loading/> : "order"}</button>
                          </div>
                     </div>
                </div>
