@@ -28,7 +28,7 @@ const Landingpage = () => {
      }, []);
 
      return (
-          <div className='bg-blue-200/40'>
+          <div className='bg-primary/5'>
                {/* <Navbar></Navbar> */}
                <div className='min-h-screen flex mx-5 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto'>
                     <div className='md:w-1/2 w-full relative flex items-center'>

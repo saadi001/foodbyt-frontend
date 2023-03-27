@@ -26,7 +26,7 @@ const Cart = () => {
                     <p className='my-2 font-medium'>Your orders:</p>
                     <div className='max-h-96 overflow-y-auto'>
                          {
-                              cart?.map(c => <div key={c.id} className='border rounded-md flex justify-between mb-1'>
+                              cart?.map(c => <div key={c.id} className='border rounded-md flex gap-2 justify-between mb-1'>
                                    <div className='w-28 h-24'><img className='w-full h-full object-cover rounded-tl-md rounded-bl-md' src={c.image} alt="" /></div>
                                    <div className='text-sm font-medium mr-4'>
                                         <p>{c.name}</p>

@@ -4,55 +4,511 @@
           "name": "Peyaju",
           "price": 5,
           "image": "https://i.ibb.co/TYnnt03/images-2023-03-15-T122226-249.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "2",
           "name": "alur chop",
           "price": 5,
           "image": "https://i.ibb.co/ZTs3Pj9/images-2023-03-15-T122853-872.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "3",
           "name": "beguni",
           "price": 5,
           "image": "https://i.ibb.co/YfZyxGc/images-2023-03-15-T122824-323.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "4",
           "name": "Chola (10tk)",
           "price": 10,
           "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "5",
           "name": "Chola (20tk)",
           "price": 20,
           "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "6",
           "name": "Chola (30tk)",
           "price": 30,
           "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "7",
           "name": "Chola (40tk)",
           "price": 40,
           "image": "https://i.ibb.co/m0Mcv7s/images-2023-03-15-T174242-210.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
      },
      {
           "id": "8",
           "name": "Dim chop",
           "price": 10,
           "image": "https://i.ibb.co/W3rQzr7/images-2023-03-15-T123019-675.jpg",
-          "outOfStock": false
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "9",
+          "name": "Halim (small)",
+          "price": 50,
+          "image": "https://i.ibb.co/M7grH23/halim.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "10",
+          "name": "Halim (medium)",
+          "price": 100,
+          "image": "https://i.ibb.co/M7grH23/halim.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "11",
+          "name": "Halim (large)",
+          "price": 150,
+          "image": "https://i.ibb.co/M7grH23/halim.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "17",
+          "name": "Handmade Tank Juice (Mango flovor) (250ml)",
+          "price": 15,
+          "image": "https://img.freepik.com/premium-photo/refreshing-cold-mango-juice-drinks-summer_8087-1425.jpg?w=2000",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "18",
+          "name": "Handmade Juice (Mango flovor) (350ml)",
+          "price": 20,
+          "image": "https://img.freepik.com/premium-photo/refreshing-cold-mango-juice-drinks-summer_8087-1425.jpg?w=2000",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "18",
+          "name": "Handmade Juice (Orange flovor) (250ml)",
+          "price": 15,
+          "image": "https://i.ibb.co/bgkzVj7/orange.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "19",
+          "name": "Handmade Juice (Orange flovor) (350ml)",
+          "price": 20,
+          "image": "https://i.ibb.co/bgkzVj7/orange.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "12",
+          "name": "Lemon juice (250ml)",
+          "price": 15,
+          "image": "https://i.ibb.co/RgfsGcf/images-2023-03-15-T183452-878.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "13",
+          "name": "Lemon juice (350)",
+          "price": 20,
+          "image": "https://i.ibb.co/RgfsGcf/images-2023-03-15-T183452-878.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "14",
+          "name": "Beler shorvot (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/CWk4Bk4/images-2023-03-15-T183647-234.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "15",
+          "name": "Beler shorvot (350ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/CWk4Bk4/images-2023-03-15-T183647-234.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "16",
+          "name": "Beler shorvot with milk (250ml)",
+          "price": 30,
+          "image": "https://i.ibb.co/CWk4Bk4/images-2023-03-15-T183647-234.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "20",
+          "name": "Isubgul vushi juice (250ml)",
+          "price": 20,
+          "image": "https://static-01.daraz.com.bd/p/b0ec9eb365bc327e1772ea0febf36d11.jpg_720x720.jpg_.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "21",
+          "name": "Isubgul vushi juice (350ml)",
+          "price": 25,
+          "image": "https://static-01.daraz.com.bd/p/b0ec9eb365bc327e1772ea0febf36d11.jpg_720x720.jpg_.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "22",
+          "name": "Tokmar Danar juice (250ml)",
+          "price": 15,
+          "image": "https://i.ibb.co/kSqYBPG/tokmar-Dana.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "23",
+          "name": "Tokmar Danar juice (350ml)",
+          "price": 20,
+          "image": "https://i.ibb.co/kSqYBPG/tokmar-Dana.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "23",
+          "name": "Isubgul with Tokamar dana (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/kSqYBPG/tokmar-Dana.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "24",
+          "name": "Isubgul with Tokamar dana (350ml)",
+          "price": 30,
+          "image": "https://i.ibb.co/kSqYBPG/tokmar-Dana.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "25",
+          "name": "7up (250ml)",
+          "price": 25,
+          "image": "https://images.deliveryhero.io/image/product-information-management/63ac66ffd344819be0d6a16e.jpg?height=480",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "26",
+          "name": "7up (400ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/my2vkVf/7up-400.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "27",
+          "name": "7up (1L)",
+          "price": 70,
+          "image": "https://giftall.s3.amazonaws.com/uploads/images/product/product_1587649474.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "28",
+          "name": "7up (2L)",
+          "price": 130,
+          "image": "https://giftall.s3.amazonaws.com/uploads/images/product/product_1587649474.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "29",
+          "name": "sprite (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/gvssnSv/sprite-125-ltr.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "30",
+          "name": "sprite (400ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/gvssnSv/sprite-125-ltr.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "31",
+          "name": "sprite (1L)",
+          "price": 70,
+          "image": "https://i.ibb.co/gvssnSv/sprite-125-ltr.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "32",
+          "name": "Coca cola(250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/gPsSWsT/coca.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "33",
+          "name": "Coca cola(400ml)",
+          "price": 35,
+          "image": "https://cdn.shopify.com/s/files/1/0455/0751/0428/products/64168e99f9f14a8afc2dc5ec2e1b4d43.jpg?v=1664399338",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "34",
+          "name": "Coca cola(1L)",
+          "price": 70,
+          "image": "https://i.ibb.co/YcC2TWd/coco2.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "35",
+          "name": "Coca cola(2L)",
+          "price": 130,
+          "image": "https://i.ibb.co/YcC2TWd/coco2.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "36",
+          "name": "Pepsi (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/1KDTzV7/pepsi.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "37",
+          "name": "Pepsi (400ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/M2fMvJ0/pespsi400.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "39",
+          "name": "Fanta (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/F5brMXt/fanta.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "40",
+          "name": "Fanta (400ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/jJws5zD/fanta-400.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "41",
+          "name": "Drinko (250ml)",
+          "price": 30,
+          "image": "https://i.ibb.co/CB4H0rS/drinko-250.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "42",
+          "name": "Mountain dew (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/pfjt8gR/mountain-dew-250.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "43",
+          "name": "Mountain dew (400ml)",
+          "price": 35,
+          "image": "https://i.ibb.co/xqMVHzN/mountain-dew-400.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "44",
+          "name": "Frutika (250ml)",
+          "price": 25,
+          "image": "https://i.ibb.co/gFwht5H/Frutika.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "45",
+          "name": "Minarel water (500ml)",
+          "price": 15,
+          "image": "https://i.ibb.co/vwg78K1/water-500-ml.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "46",
+          "name": "Minarel water (1L)",
+          "price": 25,
+          "image": "https://i.ibb.co/mTdbssP/water-1L.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "47",
+          "name": "Minarel water (2L)",
+          "price": 35,
+          "image": "https://i.ibb.co/hdJ1vyM/mum-2L.webp",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "48",
+          "name": "Banana (1 piece)",
+          "price": 10,
+          "image": "https://i.ibb.co/r0KvHFg/banana.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "49",
+          "name": "Khejur (100g)",
+          "price": 30,
+          "image": "https://i.ibb.co/b2ddhFv/khejur.webp",
+          "outOfStock": true,
+          "quantity": 0
+     },
+     {
+          "id": "50",
+          "name": "Muri (250g)",
+          "price": 20,
+          "image": "https://i.ibb.co/3rDSwxb/muri.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "51",
+          "name": "Muri (500g)",
+          "price": 40,
+          "image": "https://i.ibb.co/3rDSwxb/muri.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "52",
+          "name": "Muri (1Kg)",
+          "price": 80,
+          "image": "https://i.ibb.co/3rDSwxb/muri.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "53",
+          "name": "Muri (2Kg)",
+          "price": 160,
+          "image": "https://i.ibb.co/3rDSwxb/muri.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "54",
+          "name": "Jilapi (100g)",
+          "price": 20,
+          "image": "https://i.ibb.co/tqRh54Q/jilapi.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "55",
+          "name": "Burinda (100g)",
+          "price": 20,
+          "image": "https://i.ibb.co/Q8wLChP/borinda.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "56",
+          "name": "Mini doi",
+          "price": 35,
+          "image": "https://i.ibb.co/JCW2H45/cup-doi.jpg",
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "57",
+          "name": "Beaf kacci (half)",
+          "image": "https://i.ibb.co/6bj8NSZ/beaf-kacci.jpg",
+          "price": 120,
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "58",
+          "name": "Beaf kacci (full)",
+          "image": "https://i.ibb.co/6bj8NSZ/beaf-kacci.jpg",
+          "price": 240,
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "59",
+          "name": "Mutton kacci (half)",
+          "image": "https://i.ibb.co/fnf09dG/mutton-kacci.webp",
+          "price": 150,
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "60",
+          "name": "Mutton kacci (full)",
+          "image": "https://i.ibb.co/fnf09dG/mutton-kacci.webp",
+          "price": 300,
+          "outOfStock": false,
+          "quantity": 0
+     },
+     {
+          "id": "61",
+          "name": "Beaf teheri (half)",
+          "image": "https://i.ytimg.com/vi/pBbZfs46vPc/maxresdefault.jpg",
+          "outOfStock": false,
+          "quantity": 0,
+          "price": 80
+     },
+     {
+          "id": "62",
+          "name": "Beaf teheri (full)",
+          "image": "https://i.ytimg.com/vi/pBbZfs46vPc/maxresdefault.jpg",
+          "outOfStock": false,
+          "quantity": 0,
+          "price": 160
+     },
+     {
+          "id": "63",
+          "name": "Chicken biriyani (full)",
+          "image": "https://i.ibb.co/pX6r2Sw/chicken-biriyani.jpg",
+          "outOfStock": false,
+          "quantity": 0,
+          "price": 120
      }
 ]

@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
           const storedCart = getStoredCart()          
           const savedCart = [];
           for(const id in storedCart){
-               const addedProduct = products.find(product => product.id == id)               
+               const addedProduct = products.find(product => product.id == id)         
                if(addedProduct){
                     const quantity = storedCart[id];
                     addedProduct.quantity = quantity;
@@ -42,6 +42,8 @@ const AuthProvider = ({ children }) => {
           console.log(savedCart)
           setCart(savedCart)
      },[products])
+
+     // firebase stuffs 
 
      const providerLogin = (provider) => {
           setLoading(true);

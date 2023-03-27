@@ -19,11 +19,13 @@ const Navbar = () => {
                     Services
                     <svg className="fill-current rotate-90" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                </a>
-               <ul className="p-2 z-40 bg-white border">
-                    <li><a>Vajapora Items</a></li>
-                    <li><a>Halim</a></li>
-                    <li><a>Juice and sweets</a></li>
-                    <li><a>Fruits</a></li>
+               <ul className="p-3 z-40 bg-white border">
+                    <li><Link to={'/items/642224fb8c9d17b88acf66cc'}>Vajapora Items</Link></li>
+                    <li><Link to={'/items/642224fb8c9d17b88acf66cd'}>Halim</Link></li>
+                    <li><Link to={'/items/642224fb8c9d17b88acf66ce'}>Juice and sweets</Link></li>
+                    <li><Link to={'/items/642224fb8c9d17b88acf66cf'}>Fruits</Link></li>
+                    <li><Link to={'/items/642224fb8c9d17b88acf66d0'}>Muri & Sweets</Link></li>
+                    <li><Link to={'/items/642224fb8c9d17b88acf66d1'}>Biriyani & Kacci</Link></li>
 
                </ul>
           </li>

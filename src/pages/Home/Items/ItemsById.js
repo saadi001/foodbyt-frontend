@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Product from '../../../Components/Product/Product'
 
 const ItemsById = () => {
      const data = useLoaderData()
-     const {itemName,details,items} = data;
+     const {itemName,details,items} = data;     
 
      return (
           <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto'>
