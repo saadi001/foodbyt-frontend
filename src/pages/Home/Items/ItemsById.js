@@ -11,7 +11,7 @@ const ItemsById = () => {
                <div>
                     <p className='my-5 font-bold text-4xl text-center text-yellow-500'>{itemName}</p>
                     <p className='text-center font-semibold text-lg'>{details}</p>
-                    <div className='grid grid-cols-4 gap-6 mt-20'>
+                    <div className='grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-20'>
                          {
                               items?.map(item => <Product value={item}></Product>)
                          }
