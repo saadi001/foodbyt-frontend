@@ -7,6 +7,7 @@ import Home from "../Home/Home";
 import ItemsById from "../Home/Items/ItemsById";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
      {
@@ -27,12 +28,12 @@ export const router = createBrowserRouter([
                },
                {
                     path: '/items/:id',
-                    element: <ItemsById></ItemsById>,
+                    element: <PrivateRoute><ItemsById></ItemsById></PrivateRoute>,
                     loader: ({params}) => fetch(`https://foodbyt-backend.vercel.app/items/${params.id}`)
                },
                {
                     path: "/checkout",
-                    element: <Checkout></Checkout>
+                    element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
                }
           ]
      },

@@ -63,7 +63,7 @@ const Navbar = () => {
                                    {menu}
                               </ul>
                          </div>
-                         <Link to={'/'} className="normal-case text-xl"><img className='w-32' src={logo} alt="" /></Link>
+                         <Link to={'/'} className="normal-case text-xl"><img className='w-24 md:w-32' src={logo} alt="" /></Link>
                     </div>
                     <div>
                          <div className="hidden lg:flex lg:items-center ">
