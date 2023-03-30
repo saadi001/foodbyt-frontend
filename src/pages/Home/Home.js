@@ -17,7 +17,7 @@ const Home = () => {
                <Landingpage></Landingpage>
                <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
                     {/* <LandingpageSlick></LandingpageSlick> */}
-                    <SlickCarousel></SlickCarousel>
+                    {/* <SlickCarousel></SlickCarousel> */}
                     <Items></Items>
                     <Shops></Shops>
                     <Contactus></Contactus>

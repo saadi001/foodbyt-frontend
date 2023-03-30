@@ -1,19 +1,18 @@
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import React, { useContext, useEffect, useState } from 'react';
 import food from '../../../Asset/Image/Food1.png'
-import halim from '../../../Asset/Image/halim.jpeg'
-import juice from '../../../Asset/Image/juice.jpeg'
-import lebu from '../../../Asset/Image/lebu.jpeg'
-import { NavColorContext } from '../../../Contexts/NavcolorProvider';
-import Navbar from '../../Shared/Navbar/Navbar';
-import LandingpageSlick from './LandingpageSlick/LandingpageSlick'
+import juice from '../../../Asset/Image/juice.png'
+import peyaju from '../../../Asset/Image/peyaju.jpeg'
+import chola from '../../../Asset/Image/chola.jpeg'
+import { Link } from 'react-router-dom';
+
 
 const Landingpage = () => {
      const [navBackground, setNavBackground] = useState('transparent');
 
      useEffect(() => {
           const handleScroll = () => {
-               if (window.scrollY > 0) {
+               if (window.scrollY > 10) {
                     setNavBackground('#333');
                } else {
                     setNavBackground('transparent');
@@ -38,13 +37,13 @@ const Landingpage = () => {
                                    <span class="relative text-white">Iftar</span>
                               </span> <br /> From Home</p>
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
-                              <div className='mt-16  flex gap-4'>
-                                   <div className='border relative'>
-                                        <img className='object-cover w-full h-full' src={halim} alt="" />
-                                        <div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div>
-                                   </div>
-                                   <div className='border relative'><img className='object-cover w-full h-full' src={juice} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div></div>
-                                   <div className='border relative'><img className='object-cover w-full h-full' src={lebu} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>Halim</div></div>
+                              <div className='mt-16  grid grid-cols-3 gap-4'>
+                                   <Link to={'/items/642224fb8c9d17b88acf66cc'} className='border relative'>
+                                        <img className='object-cover w-full h-full' src={peyaju} alt="" />
+                                        <div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>peyaju</div>
+                                   </Link>
+                                   <Link to={'/items/642224fb8c9d17b88acf66ce'} className='border relative'><img className='object-cover w-full h-full' src={juice} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>juice</div></Link>
+                                   <Link to={'/items/642224fb8c9d17b88acf66cc'} className='border relative'><img className='object-cover w-full h-full' src={chola} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>chola</div></Link>
                                    {/* <LandingpageSlick></LandingpageSlick> */}
                               </div>
                          </div>

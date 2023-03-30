@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
+import { deleteShoppingCart } from '../../Components/addToDb';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import Loading from '../Loading/Loading';
 
 const Checkout = () => {
-     const { cart, user } = useContext(AuthContext)
+     const { cart, setCart, user } = useContext(AuthContext)
      const [loading, setLoading] = useState(false)
      const { register, formState: { errors }, handleSubmit } = useForm();
      // getting data and time 
@@ -19,7 +20,7 @@ const Checkout = () => {
           productPrice = productPrice + (product.price * product.quantity)
      }
      // calculating  service charge 
-     if (productPrice <= 50) {
+     if (productPrice <= 60) {
           serviceCharge = 5
      }
      else if (productPrice <= 100) {
@@ -41,7 +42,7 @@ const Checkout = () => {
           serviceCharge = 30
      }
      else {
-          serviceCharge = 50
+          serviceCharge = 40
      }
 
      // sending order to db 
@@ -76,6 +77,11 @@ const Checkout = () => {
           })
                .then(res => res.json())
                .then(result => {
+                    // delete from cart 
+                    deleteShoppingCart()
+                    // delete from cart 
+                    let newCart = []
+                    setCart(newCart)
                     toast.success("order taken successfully.")
                     setLoading(false)
                })
@@ -156,7 +162,7 @@ const Checkout = () => {
                                    <button type='submit' className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>{loading ? <Loading /> : "order"}</button>
                               </form>
                          </div>
-                    </div> : <div className='mt-4 font-semibold text-center'>You have no order.</div>
+                    </div> : <div className='mt-4 font-semibold text-center'>Your cart is empty now.</div>
                     }
                </div>
           </div>
