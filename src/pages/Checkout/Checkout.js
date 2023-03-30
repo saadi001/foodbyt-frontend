@@ -5,7 +5,7 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 import Loading from '../Loading/Loading';
 
 const Checkout = () => {
-     const { cart } = useContext(AuthContext)
+     const { cart, user } = useContext(AuthContext)
      const [loading, setLoading] = useState(false)
      const { register, formState: { errors }, handleSubmit } = useForm();
      // getting data and time 
@@ -55,6 +55,8 @@ const Checkout = () => {
      dataOfOrder.total = (productPrice + serviceCharge)
      dataOfOrder.date = date
      dataOfOrder.time = time
+     dataOfOrder.name = user?.displayName
+     dataOfOrder.email = user?.email
 
      console.log(dataOfOrder)
 
@@ -62,6 +64,8 @@ const Checkout = () => {
           // console.log(data)
           dataOfOrder.phone = data.phone
           dataOfOrder.chargeType = data.chargeType
+          dataOfOrder.room = data.room
+
           setLoading(true)
           fetch('https://foodbyt-backend.vercel.app/orders', {
                method: "POST",
@@ -81,7 +85,8 @@ const Checkout = () => {
           <div className='bg-slate-400/10 min-h-screen'>
                <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
                     <p className=' text-lg md:text-2xl font-bold text-primary mb-5 md:mb-14'>Check carefully the product price, service charge and total price before ordering.</p>
-                    <div className='w-full grid grid-cols-1 lg:grid-cols-12 gap-3'>
+                    {
+                         cart.length > 0 ? <div className='w-full grid grid-cols-1 lg:grid-cols-12 gap-3'>
                          <div className='lg:col-span-8 bg-white rounded-md shadow'>
                               <div className="overflow-x-auto">
                                    <table className="table w-full">
@@ -139,6 +144,10 @@ const Checkout = () => {
                                         <label className='text-sm'>Phone number*</label>
                                         <input {...register('phone')} type="number" className='border border-primary/50 py-[6px] focus:outline-none focus:border-primary rounded px-2 block mt-1 w-full' required/>
                                    </div>
+                                   <div className='mt-1'>
+                                        <label className='text-sm'>Room number*</label>
+                                        <input {...register('room')} type="number" className='border border-primary/50 py-[6px] focus:outline-none focus:border-primary rounded px-2 block mt-1 w-full' required/>
+                                   </div>
                                    <div className=''>
                                         <select {...register('chargeType')} className=" w-full border-b border-b-primary focus:border-b-primary py-3">
                                              <option value={"cash on delivery"} selected>Cash on delivery</option>
@@ -147,7 +156,8 @@ const Checkout = () => {
                                    <button type='submit' className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>{loading ? <Loading /> : "order"}</button>
                               </form>
                          </div>
-                    </div>
+                    </div> : <div className='mt-4 font-semibold text-center'>You have no order.</div>
+                    }
                </div>
           </div>
      );

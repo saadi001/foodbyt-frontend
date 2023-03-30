@@ -15,20 +15,33 @@ const AuthProvider = ({ children }) => {
      const [products, setProducts] = useState([])
     
 
-     const handleAddtoCart = (product) =>{     
+     const handleAddtoCart = (selectedProduct) =>{     
           // console.log(product)
-          const newCart = [...cart, product]
+          let newCart = [];
+          const exists = cart.find(product => product.id == selectedProduct.id)
+          if(!exists){
+               selectedProduct.quantity = 1;
+               newCart = [...cart, selectedProduct]
+          }else{
+               const rest = cart.filter(product => product.id !== selectedProduct.id)
+               exists.quantity = exists.quantity + 1
+               newCart = [...rest, exists]
+          }
+          
           setCart(newCart)
-          addToDb(product.id)
+          addToDb(selectedProduct.id)
      }
 
      useEffect(()=>{
+          console.log("product")
           fetch('products.json')
           .then(res => res.json())
           .then(data => setProducts(data))
+          console.log("product2")
      },[])
 
      useEffect(()=>{
+          console.log("saved Cart")
           const storedCart = getStoredCart()          
           const savedCart = [];
           for(const id in storedCart){
