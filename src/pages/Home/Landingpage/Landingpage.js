@@ -1,4 +1,4 @@
-import { MapPinIcon } from '@heroicons/react/24/solid';
+import { ChevronRightIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import React, { useContext, useEffect, useState } from 'react';
 import food from '../../../Asset/Image/Food1.png'
 import juice from '../../../Asset/Image/juice.png'
@@ -37,7 +37,8 @@ const Landingpage = () => {
                                    <span class="relative text-white">Iftar</span>
                               </span> <br /> From Home</p>
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
-                              <div className='mt-16  grid grid-cols-3 gap-4'>
+                              <p className='mt-24 md:mt-16 capitalize font-semibold text-sm mb-2 text-primary flex items-center gap-2'>Top selling products <ChevronRightIcon className='w-[14px] h-[14px]'></ChevronRightIcon></p>
+                              <div className='grid grid-cols-3 gap-4'>
                                    <Link to={'/items/642224fb8c9d17b88acf66cc'} className='border relative'>
                                         <img className='object-cover w-full h-full' src={peyaju} alt="" />
                                         <div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>peyaju</div>

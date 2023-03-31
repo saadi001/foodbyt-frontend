@@ -58,6 +58,7 @@ const Checkout = () => {
      dataOfOrder.time = time
      dataOfOrder.name = user?.displayName
      dataOfOrder.email = user?.email
+     dataOfOrder.order = "pending"
 
      console.log(dataOfOrder)
 
