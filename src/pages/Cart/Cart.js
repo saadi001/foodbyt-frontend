@@ -1,10 +1,10 @@
 import React, { useContext} from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { Link } from 'react-router-dom';
-import { getStoredCart, removeFromDb, deleteShoppingCart } from '../../Components/addToDb';
+import { getStoredCart, deleteShoppingCart } from '../../Components/addToDb';
 
 const Cart = () => {
-     const { cart, setCart } = useContext(AuthContext)
+     const { cart, setCart, user } = useContext(AuthContext)
      console.log(cart)
 
      const handleDeleteOne = (id) =>{
@@ -49,9 +49,9 @@ const Cart = () => {
 
      return (
           <div>
-               <p className='font-bold'>{cart?.length > 0 ? `Total product: ${cart?.length}` : "You have no order."}</p>
+               <p className='font-bold'>{cart?.length > 0 && user ? `Total product: ${cart?.length}` : "You have no order."}</p>
 
-               <div className={`${cart?.length > 0 ? "inline-block" : "hidden"} w-full`}>
+               <div className={`${cart?.length > 0 && user ? "inline-block" : "hidden"} w-full`}>
                     <p className='my-2 font-medium'>Your orders:</p>
                     <div className='max-h-96 overflow-y-auto'>
                          {
