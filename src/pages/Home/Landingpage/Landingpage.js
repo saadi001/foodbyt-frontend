@@ -39,12 +39,12 @@ const Landingpage = () => {
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
                               <p className='mt-24 md:mt-16 capitalize font-semibold text-sm mb-2 text-primary flex items-center gap-2'>Top selling products <ChevronRightIcon className='w-[14px] h-[14px]'></ChevronRightIcon></p>
                               <div className='grid grid-cols-3 gap-4'>
-                                   <Link to={'/items/642224fb8c9d17b88acf66cc'} className='border relative'>
+                                   <Link to={'/items/642610a3091b82068ce48bf4'} className='border relative'>
                                         <img className='object-cover w-full h-full' src={peyaju} alt="" />
                                         <div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>peyaju</div>
                                    </Link>
-                                   <Link to={'/items/642224fb8c9d17b88acf66ce'} className='border relative'><img className='object-cover w-full h-full' src={juice} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>juice</div></Link>
-                                   <Link to={'/items/642224fb8c9d17b88acf66cc'} className='border relative'><img className='object-cover w-full h-full' src={chola} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>chola</div></Link>
+                                   <Link to={'/items/642610a3091b82068ce48bf6'} className='border relative'><img className='object-cover w-full h-full' src={juice} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>juice</div></Link>
+                                   <Link to={'/items/642610a3091b82068ce48bf4'} className='border relative'><img className='object-cover w-full h-full' src={chola} alt="" /><div className='bg-white absolute left-2 right-2 bottom-2 px-2 py-2 font-semibold'>chola</div></Link>
                                    {/* <LandingpageSlick></LandingpageSlick> */}
                               </div>
                          </div>

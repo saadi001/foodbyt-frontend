@@ -8,6 +8,7 @@ import ItemsById from "../Home/Items/ItemsById";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import PrivateRoute from "./PrivateRoute";
+import Orders from "../Orders/Orders";
 
 export const router = createBrowserRouter([
      {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
                {
                     path: "/checkout",
                     element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
+               },
+               {
+                    path: "/xyz",
+                    element: <Orders></Orders>
                }
           ]
      },
