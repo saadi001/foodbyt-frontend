@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Contexts/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
-import Loading from '../pages/Loading/Loading';
 import Loading2 from '../pages/Loading/Loading2';
 
 const Profile = () => {

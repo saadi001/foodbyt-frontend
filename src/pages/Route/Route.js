@@ -12,6 +12,8 @@ import Orders from "../Orders/Orders";
 import ShopDetails from "../Home/Shops/ShopDetails";
 import Contactus from "../Home/ContactUs/Contactus";
 import FAQ from "../Home/FAQ/FAQ";
+import PendingOrders from "../PendingOrders/PendingOrders";
+import CompletedOrders from "../CompletedOrders/CompletedOrders";
 
 export const router = createBrowserRouter([
      {
@@ -42,6 +44,14 @@ export const router = createBrowserRouter([
                {
                     path: "/xyz",
                     element: <Orders></Orders>
+               },
+               {
+                    path: '/pendingOrders',
+                    element: <PendingOrders></PendingOrders>
+               },
+               {
+                    path: '/completedOrders',
+                    element: <CompletedOrders></CompletedOrders>
                },
                {
                     path: "/shop",
