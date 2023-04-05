@@ -54,7 +54,7 @@ const Signup = () => {
 
      const saveUser = (data) =>{
           const {name, email, password, phone, location} = data;
-          const user = {name, email, password, phone, location}
+          const user = {name, email, password, phone, location,role: "user"}
 
           fetch('https://foodbyt-backend.vercel.app/users',{
                method:'POST',

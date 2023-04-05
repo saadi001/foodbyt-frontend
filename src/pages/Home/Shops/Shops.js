@@ -1,5 +1,6 @@
 import React from 'react';
 import halim from '../../../Asset/Image/halim.jpeg'
+import { Link } from 'react-router-dom';
 
 const Shops = () => {
 
@@ -16,7 +17,7 @@ const Shops = () => {
   </span></h5>
                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                     {
-                         checking?.map(c => <div>
+                         checking?.map(c => <Link to={'/shop'}>
                               <img className='object-cover w-full rounded-xl border' src={halim} alt="" />
                               <div className='text-xl font-bold mt-4 '>Dhaka Hotel</div>
                               <p className='text-sm'>Dattapara, Daffodil Smart city</p>
@@ -30,7 +31,7 @@ const Shops = () => {
                                         <input type="radio" name="rating-5" className="mask mask-star" />
                                    </div>
                               </div>
-                         </div>)
+                         </Link>)
                     }
                </div>
           </div>

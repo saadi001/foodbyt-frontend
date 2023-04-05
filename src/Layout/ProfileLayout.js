@@ -20,7 +20,7 @@ const ProfileLayout = () => {
                               <ul className="menu p-4 w-80 bg-base-100 text-base-content">
                                    {/* sidebar content */}
                                    <li><Link to={'/profile'}>Your profile</Link></li>
-                                   <li><a>Sidebar Item 2</a></li>
+                                   
                               </ul>
 
                          </div>

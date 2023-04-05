@@ -9,6 +9,9 @@ import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import PrivateRoute from "./PrivateRoute";
 import Orders from "../Orders/Orders";
+import ShopDetails from "../Home/Shops/ShopDetails";
+import Contactus from "../Home/ContactUs/Contactus";
+import FAQ from "../Home/FAQ/FAQ";
 
 export const router = createBrowserRouter([
      {
@@ -39,6 +42,18 @@ export const router = createBrowserRouter([
                {
                     path: "/xyz",
                     element: <Orders></Orders>
+               },
+               {
+                    path: "/shop",
+                    element: <ShopDetails></ShopDetails>
+               },
+               {
+                    path: "/contact",
+                    element: <Contactus></Contactus>
+               },
+               {
+                    path: "/faq",
+                    element: <FAQ></FAQ>
                }
           ]
      },

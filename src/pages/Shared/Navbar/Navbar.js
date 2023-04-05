@@ -29,8 +29,8 @@ const Navbar = () => {
 
                </ul>
           </li>
-          <li><a>Find shop</a></li>
-          <li><a>Contact us</a></li>
+          <li><Link to={"/shop"}>Find shop</Link></li>
+          <li><Link to={"/faq"}>Service charge</Link></li>
           <li tabIndex={0}>
                <a className="justify-between">
                     Account

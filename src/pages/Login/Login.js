@@ -4,10 +4,11 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../Asset/icon/icons8-google-48.png'
 import { AuthContext } from '../../Contexts/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
      const [loginError, setLoginError] = useState('')
-     const { signIn, providerLogin } = useContext(AuthContext)
+     const { signIn, providerLogin, user } = useContext(AuthContext)
      const { register, formState: { errors }, handleSubmit } = useForm();
      const provider = new GoogleAuthProvider()
      const navigate = useNavigate()
@@ -19,6 +20,11 @@ const Login = () => {
           providerLogin(provider)
                .then(result => {
                     console.log(result.user)
+                    const userInfo = {
+                         email: result.user?.email,
+                         name: result.user?.displayName
+                    }
+                    saveUser(userInfo)
                     navigate(from, {replace: true})
                })
                .catch(err => console.error(err))
@@ -32,6 +38,7 @@ const Login = () => {
                .then(result => {
                     const user = result.user;
                     console.log(user)
+                    
                     navigate(from, {replace: true})
                })
                .catch(error => {
@@ -39,6 +46,36 @@ const Login = () => {
                     setLoginError(errMessage)
                })
 
+     }
+
+     const saveUser = (data) =>{
+          const {email, name} = data;
+          const userInfo = {
+               email,
+               name,
+               password: "",
+               phone: "",
+               location:"",
+               role: "user"
+          }
+
+          fetch('https://foodbyt-backend.vercel.app/users', {
+               method: 'POST', 
+               headers: {
+                    'content-type' : 'application/json'
+               },
+               body: JSON.stringify(userInfo)
+          })
+          .then(res => res.json())
+          .then(data => {
+               console.log(data)
+               if(data.acknowledged){
+                    toast.success("sign in successful")
+               }
+               else{
+                    toast.success(`Welcome back ${name}`)
+               }
+          })
      }
      return (
           <div className='my-5'>

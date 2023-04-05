@@ -47,7 +47,7 @@ const Profile = () => {
                     </div>
                     <div className='font-semibold text-xl'>
                          <p>{user?.displayName}</p>
-                         <p className='text-base'>{user?.email}</p>
+                         <p className='text-sm'>{user?.email}</p>
                     </div>
 
                </div>
