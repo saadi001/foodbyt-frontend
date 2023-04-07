@@ -74,14 +74,16 @@ const Checkout = () => {
           dataOfOrder.chargeType = data.chargeType
           dataOfOrder.room = data.room
           // setting time so that use can not order after a time 
-          if(currentHour >= 16 && currentMinute >= 45) {
+          console.log(currentHour)          
+          console.log(currentMinute)
+          if (currentHour >= 16 || (currentHour === 16 && currentMinute >= 50)) {
                // setModalMessage('You can not order after 4.45 pm.')
                // setShowModal(true)
-               // console.log('hello')
-               toast.error('Sorry, You can not order after 4.45 PM. For help contact our facebook page.')
-               
+
+               console.log(currentHour, currentMinute)
+               toast.error('Sorry, You can not order after 4.50 PM. For help contact our facebook page.')
           }
-          else {
+           else {
                setLoading(true)
                fetch('https://foodbyt-backend.vercel.app/orders', {
                     method: "POST",
@@ -177,12 +179,12 @@ const Checkout = () => {
                                                   <option value={"cash on delivery"} selected>Cash on delivery</option>
                                              </select>
                                         </div>
-                                        <button type='submit' htmlFor="message-modal"  className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>{loading ? <Loading /> : "order"}</button>
+                                        <button type='submit' htmlFor="message-modal" className='uppercase w-full bg-primary text-white text-lg py-[6px] mt-3'>{loading ? <Loading /> : "order"}</button>
                                         {/* <label onClick={} htmlFor="message-modal" className="btn">open modal</label> */}
                                         {
-                                             showModal && 
+                                             showModal &&
                                              <MessageModal message={MessageModal}></MessageModal>
-                                             }
+                                        }
                                    </form>
                               </div>
                          </div> : <div className='mt-4 font-semibold text-center'>Your cart is empty now.</div>

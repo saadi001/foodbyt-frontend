@@ -8,7 +8,7 @@ const PendingOrders = () => {
           queryFn: async () => {
                const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrderForAdmin?order=pending`)
                const data = await res.json()
-               console.log(data)
+               // console.log(data)
                return data;
           }
      })
