@@ -6,7 +6,11 @@ const PendingOrders = () => {
      const { data: pendingOrders = [], isLoading, refetch } = useQuery({
           queryKey: ['pendingOrders', 'pending'],
           queryFn: async () => {
-               const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrderForAdmin?order=pending`)
+               const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrderForAdmin?order=pending`,{
+                    headers: {
+                         authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+               })
                const data = await res.json()
                // console.log(data)
                return data;

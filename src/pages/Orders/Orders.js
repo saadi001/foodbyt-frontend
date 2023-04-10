@@ -7,7 +7,11 @@ const Orders = () => {
      const {data: Orders = [], isLoading, refetch} = useQuery({
           queryKey: ["orders"],
           queryFn: async ()=>{
-               const res = fetch('https://foodbyt-backend.vercel.app/orders')
+               const res = fetch('https://foodbyt-backend.vercel.app/orders',{
+                    headers: {
+                         authorization : `bearer ${localStorage.getItem('accessToken')}`
+                    }
+               })
                const data = (await res).json()
                return data;
           }
@@ -33,7 +37,7 @@ const Orders = () => {
           <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
                <div className='grid grid-cols-2 gap-3'>
                     {
-                         Orders?.map(order => <div className='border shadow p-3'>
+                         Orders?.map(order => <div key={order._id} className='border shadow p-3'>
                               <p>Total: {order?.total}</p>
                               <p>Date: {order?.date}</p>
                               <p>Name: {order?.name}</p>

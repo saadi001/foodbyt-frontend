@@ -33,8 +33,8 @@ const Landingpage = () => {
                     <div className='md:w-1/2 w-full relative flex items-center'>
                          <div>
                               <p className='text-lg md:text-xl font-medium flex items-center gap-1'><MapPinIcon className='w-5 h-5 text-[#EA2A00]'></MapPinIcon> Daffodil International University</p>
-                              <p className='text-[36px] md:text-[42px] font-bold my-3'>Order your favourite <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#EA2A00] relative inline-block">
-                                   <span class="relative text-white">Iftar</span>
+                              <p className='text-[36px] md:text-[42px] font-bold my-3'>Order your favourite <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#EA2A00] relative inline-block">
+                                   <span className="relative text-white">Iftar</span>
                               </span> <br /> From Home</p>
                               {/* <div className='my-5'><input className='bg-white py-3 px-5 rounded-[50px] w-[400px] shadow-lg' type="text" /></div> */}
                               <p className='mt-24 md:mt-16 capitalize font-semibold text-sm mb-2 text-primary flex items-center gap-2'>Top selling products <ChevronRightIcon className='w-[14px] h-[14px]'></ChevronRightIcon></p>

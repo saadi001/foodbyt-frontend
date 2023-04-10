@@ -8,7 +8,11 @@ const Profile = () => {
      const { data: pendingOrders = [], isLoading, refetch } = useQuery({
           queryKey: ['pendingOrders', user?.email],
           queryFn: async () => {
-               const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrders?email=${user?.email}`)
+               const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrders?email=${user?.email}`,{
+                    headers: {
+                         authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+               })
                const data = await res.json()
                console.log(data)
                return data;
@@ -18,7 +22,11 @@ const Profile = () => {
      const {data: completedOrders = []} = useQuery({
           queryKey: ['completedOrders', user?.email],
           queryFn: async () =>{
-               const res = await fetch(`https://foodbyt-backend.vercel.app/completedOrder?email=${user?.email}`)
+               const res = await fetch(`https://foodbyt-backend.vercel.app/completedOrder?email=${user?.email}`,{
+                    headers: {
+                         authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+               })
                const data = await res.json()
                return data;
           }

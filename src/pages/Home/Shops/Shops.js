@@ -27,7 +27,7 @@ const Shops = () => {
                </span></h5>
                <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                     {
-                         shops?.map(shop => <Link to={'/shop'} className=''>
+                         shops?.map(shop => <Link to={'/shop'} key={shop._id} className=''>
                               <img className='object-cover w-full rounded-xl border' src={shop?.image} alt="" />
                               <div className='text-xl font-bold mt-4 capitalize'>{shop?.name}</div>
                               <p className='text-sm'>{shop?.adress}</p>

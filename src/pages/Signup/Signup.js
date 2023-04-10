@@ -5,17 +5,22 @@ import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../Asset/icon/icons8-google-48.png'
 import { AuthContext } from '../../Contexts/AuthProvider';
+import useToken from '../../Hooks/useToken';
 
 const Signup = () => {
      const { createUser, updateUserProfile, providerLogin } = useContext(AuthContext)
      const [signupError, setSignupError] = useState('')
      const provider = new GoogleAuthProvider()
      const { register, formState: { errors }, handleSubmit } = useForm();
+     const [createdEmail, setCreatedEmail] = useState('')
      const navigate = useNavigate()
      const location = useLocation()
+     // const [token] = useToken(createdEmail)
 
-     const from = location.state?.from?.pathname || '/'
-
+     // if(token){
+     //      navigate('/')
+     // }
+     
 
      const handleSignup = (data) => {
           console.log(data)
@@ -34,7 +39,7 @@ const Signup = () => {
                     }
                     updateUserProfile(userInfo)
                          .then(() => {
-                              navigate(from, {replace: true})
+                              navigate('/')
                               saveUser(data)
                          })
                          .catch(err => console.error(err))
@@ -57,7 +62,7 @@ const Signup = () => {
                          name: result.user?.displayName
                     }
                     saveUserForGoogleProvider(userInfo)
-                    navigate(from, {replace: true})
+                    navigate("/")
 
                })
                .catch(err => console.error(err))
@@ -77,6 +82,16 @@ const Signup = () => {
                .then(res => res.json())
                .then(data => {
                     console.log(data)
+                    fetch(`https://foodbyt-backend.vercel.app/jwt?email=${email}`)
+                    .then(res => res.json())
+                    .then(data => {
+                         // console.log(data.accessToken)
+                         if (data.accessToken) {
+                              localStorage.setItem('accessToken', data.accessToken)
+                              navigate('/')
+                         }
+                    })
+                    
                })
      }
 

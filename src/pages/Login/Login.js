@@ -25,7 +25,7 @@ const Login = () => {
                          name: result.user?.displayName
                     }
                     saveUser(userInfo)
-                    navigate(from, {replace: true})
+                    
                })
                .catch(err => console.error(err))
      }
@@ -38,8 +38,16 @@ const Login = () => {
                .then(result => {
                     const user = result.user;
                     console.log(user)
+                    fetch(`https://foodbyt-backend.vercel.app/jwt?email=${email}`)
+                    .then(res => res.json())
+                    .then(data => {
+                         // console.log(data.accessToken)
+                         if (data.accessToken) {
+                              localStorage.setItem('accessToken', data.accessToken)
+                              navigate(from, {replace: true})
+                         }
+                    })
                     
-                    navigate(from, {replace: true})
                })
                .catch(error => {
                     const errMessage = error.message.split('/')[1].slice(0, -1).slice(0, -1);
@@ -69,12 +77,21 @@ const Login = () => {
           .then(res => res.json())
           .then(data => {
                console.log(data)
+               fetch(`https://foodbyt-backend.vercel.app/jwt?email=${email}`)
+                    .then(res => res.json())
+                    .then(data => {
+                         // console.log(data.accessToken)
+                         if (data.accessToken) {
+                              localStorage.setItem('accessToken', data.accessToken)
+                         }
+                    })
                if(data.acknowledged){
                     toast.success("sign in successful")
                }
                else{
                     toast.success(`Welcome back ${name}`)
                }
+               navigate(from, {replace: true})
           })
      }
      return (
