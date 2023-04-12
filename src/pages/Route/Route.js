@@ -74,6 +74,18 @@ export const router = createBrowserRouter([
                {
                     path: '/profile',
                     element: <Profile></Profile>
+               },
+               {
+                    path: '/profile/TotalOrders',
+                    element: <Orders></Orders>
+               },
+               {
+                    path: '/profile/pendingOrders',
+                    element: <PendingOrders></PendingOrders>
+               },
+               {
+                    path: '/profile/completedOrders',
+                    element: <CompletedOrders></CompletedOrders>
                }
           ]
      }

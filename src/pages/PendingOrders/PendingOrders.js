@@ -4,7 +4,7 @@ import Loading2 from '../Loading/Loading2';
 
 const PendingOrders = () => {
      const { data: pendingOrders = [], isLoading, refetch } = useQuery({
-          queryKey: ['pendingOrders', 'pending'],
+          queryKey: ['pendingOrders'],
           queryFn: async () => {
                const res = await fetch(`https://foodbyt-backend.vercel.app/pendingOrderForAdmin?order=pending`,{
                     headers: {
@@ -28,6 +28,7 @@ const PendingOrders = () => {
                               <p>Total: {order?.total}</p>
                               <p>Date: {order?.date}</p>
                               <p>Name: {order?.name}</p>
+                              <p>Name: {order?.email}</p>
                               <p>delivery: {order?.order}</p>
                               <div className='w-full flex justify-end'>
                                    <button  className='bg-primary px-3 py-1 rounded-md text-white'>Make completed</button>
