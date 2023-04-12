@@ -14,6 +14,7 @@ import Contactus from "../Home/ContactUs/Contactus";
 import FAQ from "../Home/FAQ/FAQ";
 import PendingOrders from "../PendingOrders/PendingOrders";
 import CompletedOrders from "../CompletedOrders/CompletedOrders";
+import Users from "../Users/Users";
 
 export const router = createBrowserRouter([
      {
@@ -86,6 +87,10 @@ export const router = createBrowserRouter([
                {
                     path: '/profile/completedOrders',
                     element: <CompletedOrders></CompletedOrders>
+               },
+               {
+                    path: '/profile/users',
+                    element: <Users></Users>
                }
           ]
      }

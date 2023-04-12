@@ -1,10 +1,73 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loading2 from '../Loading/Loading2';
+import { toast } from 'react-hot-toast';
 
 const Users = () => {
-     
+     const { data: users = [], isLoading, refetch } = useQuery({
+          queryKey: ['users'],
+          queryFn: async () => {
+               const res = fetch('https://foodbyt-backend.vercel.app/users')
+               const data = (await res).json()
+               return data;
+          }
+     })
+
+     const handleMakiAdmin = (id) => {
+          fetch(`https://foodbyt-backend.vercel.app/user/admin/${id}`, {
+               method: 'PUT',
+               headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+               }
+          })
+               .then(res => res.json())
+               .then(data => {
+                    console.log(data)
+                    if (data.modifiedCount > 0) {
+                         toast.success('Make admin successful.')
+                         refetch()
+                    }else{
+                         toast.error(`${data.message}`)
+                    }
+
+               })
+     }
+
+     if (isLoading) {
+          return <Loading2></Loading2>
+     }
      return (
-          <div>
-               users
+          <div className='p-2'>
+               <p className='mb-4'>All users</p>
+               {
+                    users?.length > 0 && <div className="overflow-x-auto max-w-7xl">
+                         <table className="table table-zebra w-full">
+                              {/* head */}
+                              <thead>
+                                   <tr>
+                                        <th></th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   {
+                                        users?.map((user, i) => <tr key={i}>
+                                             <td>{i + 1}</td>
+                                             <td>{user?.name}</td>
+                                             <td>{user?.email}</td>
+                                             <td>{
+                                                  user?.role === 'admin' ? <button className='text-white text-sm px-3 py-1 bg-neutral rounded'>Admin</button> : <button onClick={() => handleMakiAdmin(user._id)} className='text-sm px-3 py-1  bg-green-700 text-white rounded'>Make admin</button>
+                                             }
+                                             </td>
+                                        </tr>)
+                                   }
+                              </tbody>
+                         </table>
+                    </div>
+               }
+
           </div>
      );
 };
