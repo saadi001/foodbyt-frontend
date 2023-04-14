@@ -15,6 +15,7 @@ import FAQ from "../Home/FAQ/FAQ";
 import PendingOrders from "../PendingOrders/PendingOrders";
 import CompletedOrders from "../CompletedOrders/CompletedOrders";
 import Users from "../Users/Users";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
      {
@@ -78,19 +79,19 @@ export const router = createBrowserRouter([
                },
                {
                     path: '/profile/TotalOrders',
-                    element: <Orders></Orders>
+                    element: <AdminRoute><Orders></Orders></AdminRoute>
                },
                {
                     path: '/profile/pendingOrders',
-                    element: <PendingOrders></PendingOrders>
+                    element: <AdminRoute><PendingOrders></PendingOrders></AdminRoute>
                },
                {
                     path: '/profile/completedOrders',
-                    element: <CompletedOrders></CompletedOrders>
+                    element: <AdminRoute><CompletedOrders></CompletedOrders></AdminRoute>
                },
                {
                     path: '/profile/users',
-                    element: <Users></Users>
+                    element: <AdminRoute><Users></Users></AdminRoute>
                }
           ]
      }
