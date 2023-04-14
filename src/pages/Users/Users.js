@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Loading2 from '../Loading/Loading2';
 import { toast } from 'react-hot-toast';
+import { data } from 'autoprefixer';
 
 const Users = () => {
      const { data: users = [], isLoading, refetch } = useQuery({
@@ -13,7 +14,7 @@ const Users = () => {
           }
      })
 
-     const handleMakiAdmin = (id) => {
+     const handleMakeAdmin = (id) => {
           fetch(`https://foodbyt-backend.vercel.app/user/admin/${id}`, {
                method: 'PUT',
                headers: {
@@ -27,10 +28,29 @@ const Users = () => {
                          toast.success('Make admin successful.')
                          refetch()
                     }else{
-                         toast.error(`${data.message}`)
+                         toast.error(`${data?.message}`)
                     }
 
                })
+     }
+
+     const handleMakeUser = (id) =>{
+          fetch(`https://foodbyt-backend.vercel.app/user/makeUser/${id}`,{
+               method: 'PUT',
+               headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+               }
+          })
+          .then(res => res.json())
+          .then(data => {
+               console.log(data)
+               if(data.modifiedCount > 0){
+                    toast.success('remove admin status successfully.')
+                    refetch()
+               }else{
+                    toast.error(`${data?.message}`)
+               }
+          })
      }
 
      if (isLoading) {
@@ -58,7 +78,7 @@ const Users = () => {
                                              <td>{user?.name}</td>
                                              <td>{user?.email}</td>
                                              <td>{
-                                                  user?.role === 'admin' ? <button className='text-white text-sm px-3 py-1 bg-neutral rounded'>Admin</button> : <button onClick={() => handleMakiAdmin(user._id)} className='text-sm px-3 py-1  bg-green-700 text-white rounded'>Make admin</button>
+                                                  user?.role === 'admin' ? <button onClick={()=> handleMakeUser(user._id)} className='text-white text-sm px-3 py-1 bg-neutral rounded'>Admin</button> : <button onClick={() => handleMakeAdmin(user._id)} className='text-sm px-3 py-1  bg-green-700 text-white rounded'>Make admin</button>
                                              }
                                              </td>
                                         </tr>)
