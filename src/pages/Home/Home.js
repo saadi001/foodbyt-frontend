@@ -8,6 +8,7 @@ import Items from './Items/Items';
 import Landingpage from './Landingpage/Landingpage';
 import LandingpageSlick from './Landingpage/LandingpageSlick/LandingpageSlick';
 import Shops from './Shops/Shops';
+import SwiperSlick from '../SwiperSlick/SwiperSlick';
 
 const Home = () => {     
      
@@ -16,8 +17,6 @@ const Home = () => {
           <div className='w-full'>
                <Landingpage></Landingpage>
                <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
-                    {/* <LandingpageSlick></LandingpageSlick> */}
-                    {/* <SlickCarousel></SlickCarousel> */}
                     <Items></Items>
                     <Shops></Shops>
                     <Contactus></Contactus>

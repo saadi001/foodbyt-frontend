@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Loading2 from '../Loading/Loading2';
 import { toast } from 'react-hot-toast';
-import { data } from 'autoprefixer';
 
 const Users = () => {
      const { data: users = [], isLoading, refetch } = useQuery({
