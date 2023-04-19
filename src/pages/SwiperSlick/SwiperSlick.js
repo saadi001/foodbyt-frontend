@@ -6,6 +6,7 @@ import img from '../../Asset/Image/halim.jpeg'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import SwiperButtons from './SwiperButtons';
 
 const SwiperSlick = () => {
      return (
@@ -13,14 +14,14 @@ const SwiperSlick = () => {
                <Swiper
                     spaceBetween={20}
                     slidesPerView={3}
-                    autoplay={{
-                         delay: 2000,
-                         disableOnInteraction: false,
-                       }}
+                    // autoplay={{
+                    //      delay: 2000,
+                    //      disableOnInteraction: false,
+                    //    }}
                     // pagination={{
                     //      clickable: true,
                     // }}
-                    navigation={true}
+                    // navigation={true}
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                     onSlideChange={() => console.log('slide change')}
@@ -56,6 +57,7 @@ const SwiperSlick = () => {
                               <div className='absolute bg-white font-semibold z-50 left-2 right-2 bottom-2 p-2 text-sm capitalize'>hello</div>
                          </div>
                     </SwiperSlide>
+                    <SwiperButtons></SwiperButtons>
                     
                </Swiper>
           </div>
