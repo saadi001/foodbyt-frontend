@@ -27,9 +27,9 @@ const ProfileLayout = () => {
                                    {
                                         isAdmin && <>
                                              <li><Link to={'/profile/users'}>Users</Link></li>
-                                             <li><Link to={'/profile/TotalOrders'}>Total Orders</Link></li>
                                              <li><Link to={'/profile/pendingOrders'}>Pending Orders</Link></li>
                                              <li><Link to={'/profile/completedOrders'}>Completed Orders</Link></li>
+                                             <li><Link to={'/profile/TotalOrders'}>Total Orders</Link></li>
                                         </>
                                    }
 
