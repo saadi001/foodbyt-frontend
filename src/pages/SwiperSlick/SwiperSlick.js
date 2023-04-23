@@ -2,7 +2,6 @@ import React from 'react';
 import './SwiperSlick.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import img from '../../Asset/Image/halim.jpeg'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";

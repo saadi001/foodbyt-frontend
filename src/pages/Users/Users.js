@@ -56,8 +56,8 @@ const Users = () => {
           return <Loading2></Loading2>
      }
      return (
-          <div className='p-2'>
-               <p className='mb-4'>All users</p>
+          <div className='mx-3 md:mx-5 lg:mx-8  2xl:max-w-7xl 2xl:mx-auto pt-5'>
+               <p className='text-lg font-semibold text-slate-800 mb-3 capitalize'>All users</p>
                {
                     users?.length > 0 && <div className="overflow-x-auto max-w-7xl">
                          <table className="table table-zebra w-full">
