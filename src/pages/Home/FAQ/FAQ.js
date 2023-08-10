@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQ = () => {
      return (
-          <div className='py-14 mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
+          <div className='py-14 mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5 mt-24 mb-5'>
                <h3 className='text-2xl md:text-4xl font-bold text-center mb-14'>Frequently Asked <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#EA2A00] relative inline-block">
                     <span class="relative text-white">Questions</span>
                </span></h3>

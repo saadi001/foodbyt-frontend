@@ -7,7 +7,7 @@ const ItemsById = () => {
      const {itemName,details,items} = data;     
 
      return (
-          <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto'>
+          <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto mt-24 mb-5'>
                <div>
                     <p className='my-5 font-bold text-4xl text-center text-yellow-500'>{itemName}</p>
                     <p className='text-center font-semibold text-lg'>{details}</p>

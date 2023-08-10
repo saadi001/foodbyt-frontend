@@ -108,7 +108,7 @@ const Checkout = () => {
      }
 
      return (
-          <div className='bg-slate-400/10 min-h-screen'>
+          <div className='bg-slate-400/10 min-h-screen pt-24 pb-5'>
                <div className='mx-3 md:mx-8 lg:mx-28 xl:mx-32 2xl:max-w-7xl 2xl:mx-auto pt-5'>
                     <p className=' text-lg text-center md:text-2xl font-bold text-primary mb-5 md:mb-14'>Check carefully the product price, service charge and total price before ordering.</p>
                     {

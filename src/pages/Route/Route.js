@@ -43,25 +43,21 @@ export const router = createBrowserRouter([
                     path: "/checkout",
                     element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
                },
-               {
-                    path: "/xyz",
-                    element: <Orders></Orders>
-               },
-               {
-                    path: '/pendingOrders',
-                    element: <PendingOrders></PendingOrders>
-               },
-               {
-                    path: '/completedOrders',
-                    element: <CompletedOrders></CompletedOrders>
-               },
+               // {
+               //      path: "/xyz",
+               //      element: <Orders></Orders>
+               // },
+               // {
+               //      path: '/pendingOrders',
+               //      element: <PendingOrders></PendingOrders>
+               // },
+               // {
+               //      path: '/completedOrders',
+               //      element: <CompletedOrders></CompletedOrders>
+               // },
                {
                     path: "/shop",
                     element: <ShopDetails></ShopDetails>
-               },
-               {
-                    path: "/contact",
-                    element: <Contactus></Contactus>
                },
                {
                     path: "/faq",

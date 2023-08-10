@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Asset/logo/logo1.png'
 import { AuthContext } from '../../../Contexts/AuthProvider';
+import "./Navbar.css"
 
 const Navbar = () => {
      const { user, logOut, cart } = useContext(AuthContext)
@@ -52,7 +53,7 @@ const Navbar = () => {
 
 
      return (
-          <div className={`z-40 sticky top-0 bg-white shadow-sm`}>
+          <div className={`z-40 absolute left-0 right-0 top-0 backdrop-blur-md backdrop-saturate-150 bg-white/75`}>
                <div className="navbar justify-between gap-3  px-3 md:px-8 lg:px-20 z-50">
                     <div className="">
                          <div className="dropdown">
